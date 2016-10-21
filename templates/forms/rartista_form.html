@@ -1,11 +1,14 @@
-<html>
-	<head>
-		{% block content%}
+{% extends "base/index.html" %}
+
+{% block content%}
+	<div id="formul" align="center">
+		<h3> Regristo Artista</h3>
 		<form method="post">
-		{% csrf_token %}
-		{{ form.as_p}}
-		<button type="submit">Guardar</button>
+			{% csrf_token %}
+
+			<p class="campos">{{ form.nombre}}</p>
+			<button type="submit">Guardar</button>
 		</form>
-		{% endblock%}
-	</head>
-</html>
+	</div>
+
+{% endblock%}
