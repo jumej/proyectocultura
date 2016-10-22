@@ -9,6 +9,12 @@ class Categoria(models.Model):
 	def __unicode__(self):
 		return '{}'.format(self.nombre)
 
+class Departamento(models.Model):
+	nombre = models.CharField(max_length=30)
+
+	def __unicode__(self):
+		return '{}'.format(self.nombre)
+
 class Tamanio(models.Model):
 	descripcion = models.CharField(max_length=10)
 
@@ -21,6 +27,7 @@ class Artista(models.Model):
 	telefono = models.CharField(max_length=10)
 	email = models.EmailField()
 	categoria = models.ForeignKey(Categoria, null=True, blank=True, on_delete=models.CASCADE)
+	departamento = models.ForeignKey(Departamento, null=True, blank=True, on_delete=models.CASCADE)
 	descripcion = models.TextField(max_length=150)
 
 class Evento(models.Model):

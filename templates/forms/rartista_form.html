@@ -4,8 +4,7 @@
 	<div id="prueba">
 		<form method="post" class="contacto">
 			{% csrf_token %}
-
-			{{ form.as_p}}
+			<table>{{ form.as_table}}</table>
 			<button type="submit">Guardar</button>
 		</form>
 	</div>
