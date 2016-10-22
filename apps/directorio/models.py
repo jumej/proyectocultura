@@ -2,8 +2,12 @@ from django.db import models
 
 # Create your models here.
 
+
 class Categoria(models.Model):
 	nombre = models.CharField(max_length=25)
+
+	def __unicode__(self):
+		return '{}'.format(self.nombre)
 
 class Tamanio(models.Model):
 	descripcion = models.CharField(max_length=10)

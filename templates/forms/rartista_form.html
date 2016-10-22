@@ -1,14 +1,12 @@
 {% extends "base/index.html" %}
 
 {% block content%}
-	<div id="formul" align="center">
-		<h3> Regristo Artista</h3>
-		<form method="post">
+	<div id="prueba">
+		<form method="post" class="contacto">
 			{% csrf_token %}
 
-			<p class="campos">{{ form.nombre}}</p>
+			{{ form.as_p}}
 			<button type="submit">Guardar</button>
 		</form>
 	</div>
-
 {% endblock%}
